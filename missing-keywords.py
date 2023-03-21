@@ -1,7 +1,7 @@
 import requests
 
 # Define the URL of the webpage you want to search
-url = 'https://www.titanichotelliverpool.com/dining/easter-at-titanic'
+url = 'https://www.example.com'
 
 # Read the keywords from a txt file
 with open('keywords.txt', 'r') as f:
