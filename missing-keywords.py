@@ -1,29 +1,26 @@
 import requests
 
 # Define the URL of the webpage you want to search
-url = 'https://www.example.com'
+url = 'https://www.titanichotelliverpool.com/dining/easter-at-titanic'
 
 # Read the keywords from a txt file
 with open('keywords.txt', 'r') as f:
-    keywords = f.read().split()
+    keywords = f.read().splitlines()
 
 # Send a GET request to the URL and get the webpage content
 response = requests.get(url)
-content = response.text
+content = response.text.lower()
 
-# Create a set of all words in the content
-content_words = set(content.split())
+# Find the missing keywords
+missing_keywords = []
+for keyword in keywords:
+    if keyword.lower() not in content:
+        missing_keywords.append(keyword)
 
-# Create a set of all words in the keywords.txt file
-keyword_words = set(keywords)
-
-# Find the words that are in keywords.txt but not in the content
-missing_words = keyword_words - content_words
-
-# Print the missing words
-if missing_words:
-    print('Missing words:')
-    for word in missing_words:
-        print(word)
+# Print the missing keywords
+if missing_keywords:
+    print('Missing keywords:')
+    for keyword in missing_keywords:
+        print(keyword)
 else:
-    print('All words found!')
+    print('All keywords found!')
