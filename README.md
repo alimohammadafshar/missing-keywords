@@ -1,5 +1,6 @@
 Webpage Keyword Search
-This Python code searches for keywords in a webpage and prints any missing keywords. It is useful for checking if a webpage contains all the keywords that you are targeting for search engine optimization (SEO) purposes.
+
+This Python code searches for keywords (or every word in keywords) in a webpage and prints any missing keywords. It is useful for checking if a webpage contains all the keywords that you are targeting for search engine optimization (SEO) purposes.
 
 Getting Started
 To use this code, follow these steps:
